@@ -3,12 +3,14 @@ package ie.tudublin;
 import java.util.ArrayList;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 import processing.data.Table;
 import processing.data.TableRow;
 
 public class NematodeVisualiser extends PApplet
 {
 
+	float body[];
 	public void keyPressed()
 	{		
 		if (keyCode == LEFT)
@@ -26,7 +28,8 @@ public class NematodeVisualiser extends PApplet
 	{
 		colorMode(HSB);
 		background(0);
-		smooth();				
+		smooth();	
+		body[]			
 	}
 	
 
@@ -43,6 +46,14 @@ public class NematodeVisualiser extends PApplet
 
 
 	public void draw()
-	{	
+	{
+
+			ellipse(100,100,100,100);
+			
+
+
 	}
+
+
+
 }

@@ -19,7 +19,8 @@ public class Nematode{
             tr.getFloat("length"),
             tr.getFloat("limbs")
             tr.getString("gender"),
-            tr.getFloat("eyes"),
+            tr.getFloat("eyes")
+        );
     }
     
     public Nematode(String name, float length, float limbs, String gender, float eyes) {
@@ -28,6 +29,9 @@ public class Nematode{
         this.limbs = limbs;
         Gender = gender;
         this.eyes = eyes;
+    }
+
+    public Nematode(TableRow r) {
     }
 
     public String getName() {
@@ -65,6 +69,9 @@ public class Nematode{
     public String toString() {
         return "Nematode [Gender=" + Gender + ", Length=" + Length + ", Name=" + Name + ", eyes=" + eyes + ", limbs="
                 + limbs + "]";
+    }
+
+    public static void add(Nematode n) {
     }
 
 
