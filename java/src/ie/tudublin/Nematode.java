@@ -1,31 +1,73 @@
 package ie.tudublin;
 
+import processing.data.TableRow;
+
 public class Nematode{
-         
-	public void  NemaInfo(String args[])
-	{
-        String[] NemaStuff= {
-        "name,length,limbs,gender,eyes",
-        "Jun,3,1,m,1",
-        "Bryan,5,1,m,1",
-        "Captain Beefheart,7,0,m,0",
-        "Yo,3,1,f,1",
-        "Ciara,4,n,f,n",
-        "Emer,2,n,h,n",
-        "Danny,6,1,f,0",
-        "Jack,8,1,h,1",
-        "Liam,4,0,m,0",
-        "Patrick,1,0,h,1",
-        "Albert,6,0,n,1",
-        "Alessa,6,1,h,0",
-        "Fiona,6,1,f,1"
 
-        };
 
-        System.out.println(NemaStuff.toString());
+    public String Name;
+    public float Length;
+    public float limbs;
+    public String Gender;
+    public float eyes;
 
+
+    public void Nematable(TableRow tr)
+    {
+        this(
+            tr.getString("name"),
+            tr.getFloat("length"),
+            tr.getFloat("limbs")
+            tr.getString("gender"),
+            tr.getFloat("eyes"),
+    }
+    
+    public Nematode(String name, float length, float limbs, String gender, float eyes) {
+        Name = name;
+        Length = length;
+        this.limbs = limbs;
+        Gender = gender;
+        this.eyes = eyes;
+    }
+
+    public String getName() {
+        return Name;
+    }
+    public void setName(String name) {
+        Name = name;
+    }
+    public float getLength() {
+        return Length;
+    }
+    public void setLength(float length) {
+        Length = length;
+    }
+    public float getLimbs() {
+        return limbs;
+    }
+    public void setLimbs(float limbs) {
+        this.limbs = limbs;
+    }
+    public String getGender() {
+        return Gender;
+    }
+    public void setGender(String gender) {
+        Gender = gender;
+    }
+    public float getEyes() {
+        return eyes;
+    }
+    public void setEyes(float eyes) {
+        this.eyes = eyes;
+    }
+
+    @Override
+    public String toString() {
+        return "Nematode [Gender=" + Gender + ", Length=" + Length + ", Name=" + Name + ", eyes=" + eyes + ", limbs="
+                + limbs + "]";
     }
 
 
-    
+
+
 }
